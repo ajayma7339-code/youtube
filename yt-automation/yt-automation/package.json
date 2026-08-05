@@ -1,0 +1,25 @@
+{
+  "name": "yt-automation",
+  "version": "1.0.0",
+  "description": "Faceless YouTube automation: topic -> script -> video -> upload, daily",
+  "type": "module",
+  "scripts": {
+    "test-pipeline": "tsx src/pipeline.ts",
+    "get-token": "tsx src/auth-setup.ts",
+    "analyze": "tsx src/analytics.ts"
+  },
+  "dependencies": {
+    "googleapis": "^144.0.0",
+    "@google/generative-ai": "^0.21.0",
+    "fluent-ffmpeg": "^2.1.3",
+    "node-fetch": "^3.3.2",
+    "dotenv": "^16.4.5",
+    "edge-tts-node": "^1.0.0"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2",
+    "@types/node": "^22.10.2",
+    "@types/fluent-ffmpeg": "^2.1.27"
+  }
+}
