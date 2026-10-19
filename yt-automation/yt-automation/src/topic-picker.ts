@@ -68,7 +68,7 @@ async function fetchTrendingTopic(niche: Niche): Promise<string | null> {
 
 async function generateFreshTopic(niche: Niche): Promise<string> {
   const genAI = new GoogleGenerativeAI(CONFIG.gemini.apiKey);
-  const model = genAI.getGenerativeModel({ model: 'gemini-1.5-flash' });
+  const model = genAI.getGenerativeModel({ model: 'gemini-3.8-flash' });
   const used = (await loadUsedTopics()).used.slice(-40).join('; ');
   const prompt = `Give ONE surprising, specific ${niche} topic suitable for a 30-60 second YouTube Short.
 Avoid these already-used topics: ${used || 'none'}.
