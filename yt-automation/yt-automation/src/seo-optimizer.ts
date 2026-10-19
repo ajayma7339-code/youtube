@@ -44,7 +44,7 @@ export async function optimizeSeo(
   const suggestions = await fetchAutosuggest(topic);
 
   const genAI = new GoogleGenerativeAI(CONFIG.gemini.apiKey);
-  const model = genAI.getGenerativeModel({ model: 'gemini-1.5-flash' });
+  const model = genAI.getGenerativeModel({ model: 'gemini-3.8-flash' });
 
   const prompt = `You are optimizing YouTube SEO for a Short.
 Topic: ${topic}

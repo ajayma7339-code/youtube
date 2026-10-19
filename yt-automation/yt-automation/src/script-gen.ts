@@ -8,7 +8,7 @@ export async function generateScriptAndMetadata(
   isLongForm: boolean
 ): Promise<ScriptResult> {
   const genAI = new GoogleGenerativeAI(CONFIG.gemini.apiKey);
-  const model = genAI.getGenerativeModel({ model: 'gemini-1.5-flash' });
+  const model = genAI.getGenerativeModel({ model: 'gemini-3.8-flash' });
 
   const wordTarget = isLongForm ? '600-800 words, 3-5 minutes spoken' : '120-150 words, 30-60 seconds spoken';
 
